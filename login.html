@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS</title>
+    <link rel="stylesheet" href="login.css"  >
+    
+</head>
+<body>
+    <div class="main">
+<h2>Hostel Management System</h2>
+<div class="loginBox">
+   <h1>Login</h1>
+  <div class="Lcontent">
+    <h3>Username : <input type="text" class="itext" placeholder="Enter username"> </h3>
+    <h3>Password : <input type="password" class="itext" placeholder="Enter your password"> </h3>
+    <h3>Role : <select id="opt">
+      <option  value="" style="text-align: center;" >--select--</option>
+      <option  value="resident" style="text-align: center;">Resident</option>
+      <option value="staff" style="text-align: center;">Staff</option>
+
+
+    </select> </h3>
+ 
+ 
+ 
+  </div>
+
+
+
+  <div class="btnss">
+ <button class="Loginbtn" >Login </button>
+<p >Don't have an account <a href="###">Click Here</a> </p>
+</div>
+  </div>
+ 
+
+
+
+    </div>
+    <script>
+
+function validateLogin(){
+
+let username =
+document.getElementById("username").value.trim();
+
+let password =
+document.getElementById("password").value.trim();
+
+let role =
+document.getElementById("opt").value;
+
+
+if(username === ""){
+
+alert("Enter Username");
+
+return false;
+
+}
+
+
+if(password === ""){
+
+alert("Enter Password");
+
+return false;
+
+}
+
+
+
+if(role === ""){
+
+alert("Select Role");
+
+return false;
+
+}
+
+alert("Login Successful!");
+
+}
+
+</script>
+
+</body>
+</html>

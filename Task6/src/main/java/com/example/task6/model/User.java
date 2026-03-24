@@ -1,0 +1,68 @@
+package com.example.task6.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+
+@Entity
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Name cannot be empty")
+    private String name;
+
+    @Email(message = "Invalid email")
+    private String email;
+
+    @Min(value = 18, message = "Age must be at least 18")
+    private int age;
+
+    private String password;
+
+    // ⭐ VERY IMPORTANT
+    public User() {}
+
+    // ⭐ GETTERS & SETTERS
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
